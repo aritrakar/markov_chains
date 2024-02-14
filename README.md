@@ -1,6 +1,6 @@
 # Markov Chain Implementation
 
-This repository contains the code for a finite-state discrete time Markov chain implementation in C++ using the Eigen library. It's a work in progress and serves to complement my learnings of stochastic processes in class (STAT 333).
+This repository contains the code for a **finite-state discrete time Markov chain** implementation in **C++** using the **Eigen** library. It's a work in progress and serves to complement my learnings in my stochastic processes class (STAT 333: Stochastic Processes 1).
 
 Note that the files for Eigen were not uploaded.
 
