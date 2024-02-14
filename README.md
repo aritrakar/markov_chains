@@ -11,6 +11,11 @@ Note that the files for Eigen were not uploaded.
 1. Find the steady state.
 1. Find the periodicity of states.
 
+**To do**
+
+1. Transcience and recurrence
+1. Mean recurrence time
+
 ## Prerequisites
 
 1. C++17
