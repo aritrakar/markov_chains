@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Eigen/Dense"
 #include <fstream>
 #include <sstream>
+
 #include "markov.hpp"
 
 Eigen::MatrixXd read_tpm_file(std::string tpm_filepath) {

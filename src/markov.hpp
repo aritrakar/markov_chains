@@ -30,8 +30,8 @@ class Markov {
 
         std::vector<std::vector<int>> _get_communication_classes();
         void _dfs(int v, std::vector<bool>& visited, std::vector<int>* scc, std::stack<int>* stack, const Eigen::MatrixXd& tpm);
-        int Markov::_get_period(int state);
-        std::vector<int> Markov::_get_periods();
+        int _get_period(int state);
+        std::vector<int> _get_periods();
 };
 
 #endif

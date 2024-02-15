@@ -1,14 +1,13 @@
-#include "markov.hpp"
 #include <queue>
 #include <utility>
 #include <map>
+
+#include "markov.hpp"
 
 Markov::Markov(Eigen::MatrixXd tpm, Eigen::RowVectorXd initial_state) {
     this->N = tpm.rows();
     this->tpm = tpm;
     this->initial_state = initial_state;
-    this->communication_classes = this->_get_communication_classes();
-    this->periods = this->_get_periods();
 }
 
 Eigen::MatrixXd Markov::get_tpm() {
@@ -38,6 +37,9 @@ Eigen::VectorXd Markov::steady_state() {
 }
 
 std::vector<std::vector<int>> Markov::get_communication_classes() {
+    if (this->communication_classes.empty()) {
+        this->communication_classes = this->_get_communication_classes();
+    }   
     return this->communication_classes;
 }
 
@@ -108,6 +110,9 @@ int gcd(int a, int b) {
 }
 
 int Markov::get_period(int state) {
+    if (this->periods.empty()) {
+        this->periods = this->_get_periods();
+    }
     return this->periods[state];
 }
 
