@@ -1,6 +1,6 @@
 # Markov Chain Implementation
 
-This repository contains the code for a **finite-state discrete time Markov chain** implementation in **C++** using the **Eigen** library. It's a work in progress and serves to complement my learnings in my stochastic processes class (STAT 333: Stochastic Processes 1) using concepts from graph theory.
+This repository contains the code for a **finite-state discrete time Markov chain** implementation in **C++** using the **Eigen** library. It's a work in progress and serves to complement my learnings in my stochastic processes class using concepts from graph theory. It also serves as a practice project for using CMake and Googletest.
 
 Note that the files for Eigen were not uploaded.
 
@@ -47,9 +47,13 @@ Note that the following will work directly on Linux or MacOS. However, for runni
 
 ```bash
 # Compile and generate executable
-# g++ -O3 -o <executable_name> src/*.cpp -I <path to Eigen library>
+# Format: g++ -O3 -o <executable_name> src/*.cpp -I <path to Eigen library>
 g++ -O3 -o mc src/*.cpp -I./lib
 
 # Run executable
 ./mc ./etc/tpm1.txt
 ```
+
+### Testing
+
+This project uses Googletest for testing. Assuming you have built everything correctly, to execute tests you need only do the following: `cd build && ctest`.
